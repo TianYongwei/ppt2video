@@ -78,7 +78,12 @@ public class PptToVideoTool {
     public static void main(String[] args) throws Exception {
         // 参数1：待转化文件全路径
         // filePath: /root/storage/XX/XX/xxx.ppt
-        String filePath = args[0];
+        String filePath;
+        if(args.length == 0 ) {
+            filePath = "C:\\迅雷下载\\古诗词诗歌朗诵.pptx";
+        } else {
+            filePath = args[0];
+        }
         System.out.println("输入参数：" + filePath);
         // ppt转化为图片地址list
         List<String> list = null;
